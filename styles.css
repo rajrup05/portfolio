@@ -1,0 +1,275 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navbar */
+.header {
+    background-color: #25282d;
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #8f59e5;
+    border-radius: 5px;
+}
+
+.burger {
+    display: none;
+}
+
+.btn-primary {
+    background-color: #8f59e5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #4b2798;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #0f0f0f;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-photo img {
+    width: 600px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Projects Section */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #333;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #8f59e5;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-links {
+    margin-top: 20px;
+    
+    text-align: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-icon:hover {
+    transform: scale(1.5);
+}
+
+/* Footer */
+.footer {
+    background-color: #040505;
+    color: rgba(255, 255, 255, 0.741);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.animate {
+    animation: fadeIn 0.5s ease;
+}
+
+
+.hero {
+    animation: backgroundChange 10s infinite alternate;
+}
+
+
+.animate-up {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-left {
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.animate-right {
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .navbar .burger {
+        display: block;
+    }
+
+    .nav-links {
+
+        flex-direction: column;
+        gap: 15px;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
